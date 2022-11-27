@@ -67,12 +67,46 @@ CIRCUIT DIAGRAM
 
 
 ### PROGRAM :
- 
+ Developed by: Varsha Ajith
+ Reg no: 212221230118
+ ~~~
+// C++ code
 
+#include <Servo.h>
+int pos = 0;
+Servo servo_9;
 
+void setup()
+{
+ Serial.begin(9600);
+ servo_9.attach(9, 500, 2500);//
+}
 
+void loop()
+{
+ for (pos = 0; pos <= 180; pos += 1) 
+ {
+   servo_9.write(pos);
+   delay(15);
+ 	Serial.print("Angle of Server: ");
+ 	Serial.println(pos);
+ }
+ for (pos = 180; pos >= 0; pos -= 1) 
+ {
+   servo_9.write(pos);
+   delay(15);
+ 	Serial.print("Angle of Server: ");
+ 	Serial.println(pos);
+ }
+}
+~~~
 
+## OUTPUT:
 
+![ro51](https://user-images.githubusercontent.com/94222288/204120436-b75a4ee2-7404-444d-b9f0-0b90f5da8cb9.png)
+
+![ro52](https://user-images.githubusercontent.com/94222288/204120439-8fc8c59e-8eeb-49b7-af92-a7a6efb004c3.png)
+![ro53](https://user-images.githubusercontent.com/94222288/204120444-5a6b50d9-702b-49bb-8ff3-b4e22ec8160a.png)
 
 
 
